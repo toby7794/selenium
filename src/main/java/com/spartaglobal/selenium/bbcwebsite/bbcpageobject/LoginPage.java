@@ -13,6 +13,7 @@ public class LoginPage {
     private By passWordField = By.id("password-input");
     private By signinButtonId = By.id("submit-button");
     private By incorrectEmailErrorMessage = By.className("form-message__text");
+    private By incorrectPasswordErrorMessage = By.className("form-message__text");
 
     public LoginPage(WebDriver driver){this.driver = driver;}
 
@@ -33,4 +34,7 @@ public class LoginPage {
         return findElement(incorrectEmailErrorMessage).getText();
     }
 
+    public String getIncorrectPasswordErrorText(){
+        return findElement(incorrectPasswordErrorMessage).getText();
+    }
 }
